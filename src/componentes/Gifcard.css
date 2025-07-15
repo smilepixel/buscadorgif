@@ -1,0 +1,39 @@
+#imagen{
+    border-radius: 20%;
+    width: 180px;
+    height: 130px;
+        border: black 5px solid;
+}
+
+
+#D{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+    border-radius: 20%;
+    border: black 3px solid;
+    width: 210px;
+    height: 280px;
+}
+
+#DP{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#T{
+color: black;
+}
+
+#B{
+    border-radius: 15%;
+    width: 110px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
