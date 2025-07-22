@@ -10,7 +10,6 @@ export const Buscador = () => {
 <input type="text"
 placeholder='busca tu gif preferido'
 />
-        <Gifcard></Gifcard>
         <Secciongif></Secciongif>
         </>
     )
