@@ -10,7 +10,7 @@ export const Secciongif = () => {
     const [gif, setGif] = useState([]);
     useEffect(() => {
         const Obtencion = async () => {
-            const resultado = await api(3, "gatos");
+            const resultado = await api(20, "COSa");
             setGif(resultado || []);
         };
 
