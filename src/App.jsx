@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react'
 import { api } from './api.js'
 import { Secciongif } from './componentes/Secciongif.jsx'
 import { Buscador } from './componentes/Buscador.jsx'
@@ -8,8 +9,13 @@ function App() {
 api()
   return (
     <>
-    <Buscador/>
-            <Secciongif></Secciongif>
+    <Buscador
+    setBUSQUEDA={setBUSQUEDA}
+    />
+<Secciongif
+BUSQUEDA={BUSQUEDA}
+/>
+
     </>
   )
 }

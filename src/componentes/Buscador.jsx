@@ -1,11 +1,9 @@
 import './Buscador.css'
 import { useState } from 'react'
-export const Buscador = () => {
+export const Buscador = ({setBUSQUEDA}) => {
 
         const [Valortemporal, setValortemporal] = useState("");
-        const [BUSQUEDA, setBUSQUEDA] = useState("");
-
-    console.log(BUSQUEDA)
+        
     return (
         <>
 <input type="text"
