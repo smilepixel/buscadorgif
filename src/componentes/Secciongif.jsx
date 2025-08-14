@@ -15,7 +15,7 @@ export const Secciongif = ({BUSQUEDA}) => {
         };
 
         Obtencion();
-    },[])
+    },[BUSQUEDA])
 
 
 
