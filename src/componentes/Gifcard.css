@@ -35,6 +35,7 @@ font-size: 10px;
     height: 50px;
     background-color: aqua;
     color: white;
-    font-size: 20px;
-    border: 6px dotted rgb(255, 255, 255);
+    font-size: 15px;
+    border: 6px solid rgb(255, 255, 255);
+    border-top: 9px;
 }

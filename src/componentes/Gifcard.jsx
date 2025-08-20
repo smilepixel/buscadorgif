@@ -1,7 +1,7 @@
 
 import './Gifcard.css'
 
-export const Gifcard = ( {img,titulo} ) => {
+export const Gifcard = ( {img,titulo,Eliminargif} ) => {
 
     return (
         <>
@@ -9,7 +9,7 @@ export const Gifcard = ( {img,titulo} ) => {
         <div id='D'>
         <img id='imagen' src={img} alt="gif" />
         <h1 id='T'>{titulo}</h1>
-        <button id='B'>boton</button>
+        <button id='B' onClick={Eliminargif}>eliminar</button>
         </div>
         </div>
 
