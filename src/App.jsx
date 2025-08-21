@@ -15,7 +15,6 @@ api()
 <Secciongif
 BUSQUEDA={BUSQUEDA}
 />
-
     </>
   )
 }

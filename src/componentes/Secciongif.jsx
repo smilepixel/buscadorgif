@@ -5,12 +5,10 @@ import { api } from '../api'
 
 export const Secciongif = ({BUSQUEDA}) => {
 
-
-
+const [offset,setOffset] = useState(0);
     const [gif, setGif] = useState([]);
 
     const Eliminargif = (id) => {
-
 const NuevoGif = gif.filter(gif => gif.id !== id)
 setGif(NuevoGif)
 console.log(`${id} eliminado`)
@@ -18,11 +16,21 @@ console.log(`${id} eliminado`)
     }
 
 
+            const Mas = async () => {
+        const nuevoOffset = offset + 6;
+        const NuevoGif = await api(2, BUSQUEDA, nuevoOffset);
+        setGif([...gif, ...NuevoGif]);
+        setOffset(nuevoOffset);
+    }
+
+
     useEffect(() => {
         const Obtencion = async () => {
-            const resultado = await api(20,BUSQUEDA);
+            const resultado = await api(2,BUSQUEDA);
             setGif(resultado || []);
         };
+
+
 
         Obtencion();
     },[BUSQUEDA])
@@ -41,7 +49,7 @@ console.log(`${id} eliminado`)
             />))}
         </div>
 
-<button id='BS'>buscar más</button>
+<button id='BS' onClick={Mas}>buscar más</button>
         
         </>
     )
