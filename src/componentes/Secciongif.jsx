@@ -28,7 +28,7 @@ console.log(`${id} eliminado`)
 const URLC = (url) => {
 const URLC2 = gif2.filter(gif2 => gif2.url == url)
 setGif2(URLC2)
-console.log(`${url} añadida`)
+alert(`esta es la url: ${url}`)
 }
 
 
