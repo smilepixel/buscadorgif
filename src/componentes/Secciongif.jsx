@@ -7,6 +7,8 @@ export const Secciongif = ({BUSQUEDA}) => {
 
 const [offset,setOffset] = useState(0);
     const [gif, setGif] = useState([]);
+        const [gif2, setGif2] = useState([]);
+
 
     const Eliminargif = (id) => {
 const NuevoGif = gif.filter(gif => gif.id !== id)
@@ -22,6 +24,13 @@ console.log(`${id} eliminado`)
         setGif([...gif, ...NuevoGif]);
         setOffset(nuevoOffset);
     }
+
+const URLC = (url) => {
+const URLC2 = gif2.filter(gif2 => gif2.url == url)
+setGif2(URLC2)
+console.log(`${url} añadida`)
+}
+
 
 
     useEffect(() => {
@@ -45,7 +54,12 @@ console.log(`${id} eliminado`)
             key={gif.id}
             titulo={gif.title}
             img={gif.url}
+            url={() => URLC(gif.url)}
             Eliminargif={() => Eliminargif(gif.id)}
+            />))}
+
+                        {   gif2.map(gif2 => (<Gifcard
+            url={() => URLC(gif2.url)}
             />))}
         </div>
 
