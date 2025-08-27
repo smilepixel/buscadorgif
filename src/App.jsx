@@ -6,7 +6,7 @@ import { Buscador } from './componentes/Buscador.jsx'
 
 function App() {
           const [BUSQUEDA, setBUSQUEDA] = useState("");
-          const [CATEGORIA, setCATEGORIA] = useState("");
+          const [CATEGORIA, setCATEGORIA] = useState({});
 api()
 
 const agregarCATEGORIA = (NBUSQUEDA) => {
