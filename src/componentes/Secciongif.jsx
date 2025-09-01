@@ -3,7 +3,7 @@ import './Secciongif.css'
 import { Gifcard } from './Gifcard'
 import { api } from '../api'
 
-export const Secciongif = ({ BUSQUEDA, gifs, offset, accategoria, accoffset }) => {
+export const Secciongif = ({ BUSQUEDA, gifs, offset, accategoria, accoffset,Eliminarcategoria }) => {
 
 
 
@@ -42,17 +42,24 @@ export const Secciongif = ({ BUSQUEDA, gifs, offset, accategoria, accoffset }) =
 
     return (
         <>
-            <div id='Div'>
+            <div id='div'>
                 <h2>resultados de busqueda {BUSQUEDA}</h2>
+                <button id='Be' onClick={() => Eliminarcategoria(BUSQUEDA)}>eliminar categoria</button>
+            </div>
+            <div id='Div'>
+
                 {gifs.map(gif => (<Gifcard
                     key={gif.id}
                     titulo={gif.title}
                     img={gif.url}
                     Eliminargif={() => Eliminargif(gif.id)}
                 />))}
-            </div>
 
+            </div>
+<div id='diV'>
             <button id='BS' onClick={Mas}>buscar más</button>
+</div>
+
 
         </>
     )

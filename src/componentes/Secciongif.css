@@ -3,10 +3,38 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+    background-color: rgb(0, 172, 172);
+}
+
+#div{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    background-color: rgb(24, 255, 255);
+}
+
+#diV{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    background-color: rgb(0, 62, 62);
+}
+
+#BS{
+    border-radius: 15%;
+    width: 110px;
+    height: 50px;
+    background-color: aqua;
+    color: white;
+    font-size: 10px;
+    border: 6px solid rgb(255, 255, 255);
+    border-top: 9px;
 }
 
 
-#BS{
+#Be{
     border-radius: 15%;
     width: 110px;
     height: 50px;

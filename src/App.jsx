@@ -37,6 +37,17 @@ const actualizarOfssetCategoria = (CATEGORIA,NuevoOffset) => {
     }
   }))
 }
+
+    const Eliminarcategoria = (categoria) => {
+
+setCATEGORIA( prev => {
+  const nuevaCategoria ={...prev}
+  delete nuevaCategoria[categoria]
+  return nuevaCategoria
+})
+
+    }
+
   return (
     <>
     <Buscador
@@ -52,6 +63,7 @@ const actualizarOfssetCategoria = (CATEGORIA,NuevoOffset) => {
   offset={CATEGORIA[CATEGORIAs].offset}
   accategoria = {ACgifcategoria}
   accoffset = {actualizarOfssetCategoria}
+  Eliminarcategoria = {Eliminarcategoria}
 />
 ))}
 
